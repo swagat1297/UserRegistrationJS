@@ -5,7 +5,7 @@ test = function () {
  	utility.validateLastName();
  	utility.validateEmail();
  	utility.validateMobileNumber();
-// 	utility.validatePassword();
+ 	utility.validatePassword();
 }
 test();
 
