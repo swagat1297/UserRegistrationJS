@@ -63,7 +63,27 @@ class Registration {
 			console.log(e);
 		}
 	}
-
+	//to cvalidate mobile number//
+	validateMobileNumber = () => {
+		try {
+			const read = /^[0-9]{2}[ ][0-9]{10}$/;
+			let text = readlineSync.question(`Enter Valid Pnone Number:`);
+			// let result = text.match(read);
+			const result = read.exec(text);
+			if (result) {
+				console.log("Valid");
+			}
+			else {
+				console.log("Invalid");
+			}
+			// alert(result);
+			// const result = match.matches();
+			//console.log(result);
+		}
+		catch (e) {
+			console.log(e);
+		}
+	}
 
 }
 module.exports = new Registration();
