@@ -84,6 +84,28 @@ class Registration {
 			console.log(e);
 		}
 	}
+	//check password with Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character//
+	validatePassword = () => {
+		try {
+			const read = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+			let text = readlineSync.question(`Enter Valid Password:`);
+			// let result = text.match(read);
+			const result = read.exec(text);
+			if (result) {
+				console.log("Valid");
+			}
+			else {
+				console.log("Invalid");
+			}
+			// alert(result);
+			// const result = match.matches();
+			//console.log(result);
+		}
+		catch (e) {
+			console.log(e);
+		}
+	}
+
 
 }
 module.exports = new Registration();
